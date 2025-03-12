@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" />
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body class="bg-black text-white font-[Poppins]">
+
+    <!-- Navbar -->
+    <nav class="bg-[#0A071D] p-5 flex items-center justify-between">
+        <!-- Left Section (Logo + Menu) -->
+        <div class="flex items-center space-x-5">
+            <!-- Logo -->
+            <div class="flex items-center space-x-2">
+                <img src="../images/Layer_1.png" alt="Logo" class="h-8 md:h-10">
+                <span class="text-lg md:text-xl font-semibold text-blue-500">bycrafters</span>
+            </div>
+            <span class="hidden md:block h-6 w-[2px] bg-purple-700"></span> <!--  -->
+            <div class="hidden md:flex space-x-6 uppercase text-sm md:text-base text-gray-300">
+                <a href="#" class="hover:text-white">Home</a>
+                <a href="#" class="hover:text-white">Services</a>
+                <a href="#" class="hover:text-white">Work</a>
+                <a href="#" class="hover:text-white">BlOg</a>
+                <a href="#" class="hover:text-white">Contact</a>
+            </div>
+        </div>
+
+        <!-- Right Section (Social Icons & Mobile Menu) -->
+        <div class="flex items-center space-x-6">
+            <!-- Social Icons -->
+            <div class="hidden md:flex space-x-4 text-purple-500 text-xl md:text-2xl lg:text-3xl">
+                <a href="#" class="hover:text-white"><i class="ri-instagram-line"></i></a>
+                <a href="#" class="hover:text-white"><i class="ri-facebook-fill"></i></a>
+                <a href="#" class="hover:text-white"><i class="ri-search-line"></i></a>
+            </div>
+
+            <!-- Mobile Menu Button (Visible only on small screens) -->
+            <button id="menu-btn" class="md:hidden text-white text-2xl focus:outline-none">
+                <i class="ri-menu-line"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu (Initially Hidden) -->
+    <div id="mobile-menu"
+        class=" flex flex-col items-center space-y-4 bg-[#0A071D] text-white uppercase text-lg p-5 md:hidden">
+        <a href="#" class="hover:text-blue-500">Home</a>
+        <a href="#" class="hover:text-blue-500">Services</a>
+        <a href="#" class="hover:text-blue-500">Work</a>
+        <a href="#" class="hover:text-blue-500">Pricing</a>
+        <a href="#" class="hover:text-blue-500">Contact</a>
+    </div>
+    <!-- Welcome to Bycrafters Section with Background Image and Overlay -->
+    <section class="relative bg-cover bg-center text-white py-12 md:py-24 lg:py-32"
+        style="background-image: url('./images/color.png');">
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+        <!-- Content -->
+        <div class="container mx-auto px-4 relative z-10">
+            <!-- Heading and Subheading -->
+            <div class="text-center max-w-2xl mx-auto">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+                    Welcome to Bycrafters
+                </h1>
+                <p class="text-lg md:text-xl lg:text-2xl text-gray-200 mb-8">
+                    At Bycrafters, we believe in redefining digital possibilities by crafting tailor-made online
+                    solutions. We are more than a service provider; we are your trusted partners on a transformative
+                    digital journey.
+                </p>
+            </div>
+
+            <!-- Call-to-Action Buttons -->
+            <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6">
+                <!-- BEGIN NOW Button -->
+                <a href="#"
+                    class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition duration-300">
+                    BEGIN NOW
+                </a>
+
+                <!-- EXPLORE Button -->
+                <a href="#"
+                    class="inline-block bg-transparent border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-blue-600 hover:text-white transition duration-300">
+                    EXPLORE →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transform Your Digital Vision into Reality Section -->
+    <section class="bg-gray-800 text-white py-12 md:py-24 lg:py-32">
+        <div class="container mx-auto px-4">
+            <!-- Heading and Subheading -->
+            <div class="text-center max-w-2xl mx-auto">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+                    Transform Your Digital Vision into Reality
+                </h2>
+                <p class="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8">
+                    Unleashing excellence, crafting quality, and nurturing success every step of the way.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="bg-gray-900 text-white py-12 md:py-24 lg:py-32">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-center">
+                    About Us
+                </h2>
+                <p class="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8">
+                    Founded with a vision to simplify the digital transition for businesses, Bycrafters is committed to
+                    delivering excellence. We understand that every small business has unique challenges and
+                    opportunities, and our mission is to provide bespoke solutions that not only address these needs but
+                    also unlock growth potential.
+                    <img src="../images/call-us-now-icons-vector 1.png" alt="aboutus">
+                </p>
+                <p class="text-lg md:text-xl lg:text-2xl text-gray-300">
+                    Our team of four highly skilled professionals collaborates seamlessly to provide comprehensive
+                    solutions that cover every aspect of the digital spectrum. We believe in building relationships
+                    based on trust and transparency, ensuring that our partners—not customers—experience measurable
+                    success.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Our Services Section -->
+    <section class="bg-gray-800 text-white py-12 md:py-24 lg:py-32">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-center">
+                    Our Services
+                </h2>
+                <p class="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8">
+                    Inwebmedia is a one-stop destination for all your digital needs. Our diverse offerings include:
+                </p>
+
+                <!-- Services List -->
+                <div class="space-y-8">
+                    <!-- Website Design and Development -->
+                    <div>
+                        <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
+                            Website Design and Development
+                        </h3>
+                        <p class="text-lg md:text-xl lg:text-2xl text-gray-300">
+                            Crafting visually stunning and functionally robust websites tailored to reflect your brand
+                            identity and meet your business objectives.
+                        </p>
+                    </div>
+
+                    <!-- App Design and Development -->
+                    <div>
+                        <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
+                            App Design and Development
+                        </h3>
+                        <p class="text-lg md:text-xl lg:text-2xl text-gray-300">
+                            Creating intuitive mobile and web applications that offer seamless user experiences and
+                            drive engagement.
+                        </p>
+                    </div>
+
+                    <!-- AI Integration -->
+                    <div>
+                        <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
+                            AI Integration
+                        </h3>
+                        <p class="text-lg md:text-xl lg:text-2xl text-gray-300">
+                            Leveraging cutting-edge artificial intelligence to streamline operations, enhance user
+                            interactions, and deliver predictive insights.
+                        </p>
+                    </div>
+
+                    <!-- Digital Marketing -->
+                    <div>
+                        <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
+                            Digital Marketing
+                        </h3>
+                        <p class="text-lg md:text-xl lg:text-2xl text-gray-300">
+                            From SEO and content creation to social media strategy and paid advertising, we ensure your
+                            brand reaches the right audience effectively.
+                        </p>
+                    </div>
+
+                    <!-- Custom Digital Solutions -->
+                    <div>
+                        <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
+                            Custom Digital Solutions
+                        </h3>
+                        <p class="text-lg md:text-xl lg:text-2xl text-gray-300">
+                            Tackling unique business challenges with innovative and scalable solutions designed
+                            specifically for your needs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <p class="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8">
+            We pride ourselves on being problem solvers, capable of addressing any digital challenge a company
+            might face, regardless of scale or complexity.
+        </p>
+
+    </section>
+
+
+    <!-- Why Choose Bycrafter Section -->
+    <section class="bg-gray-900 text-white py-12 md:py-24 lg:py-32">
+
+        <div class="container mx-auto px-4">
+            <img src="../images/Group 1.png" alt="why choose us">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-center">
+                    Why Choose Bycrafter?
+                </h2>
+
+                <!-- Reasons List -->
+                <div class="space-y-8">
+                    <!-- Partner-Centric Approach -->
+                    <div>
+                        <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
+                            Partner–Centric Approach
+                        </h3>
+                        <p class="text-lg md:text-xl lg:text-2xl text-gray-300">
+                            We work collaboratively with our partners to achieve shared success, treating your goals as
+                            our own.
+                        </p>
+                    </div>
+
+                    <!-- End-to-End Solutions -->
+                    <div>
+                        <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
+                            End–to–End Solutions
+                        </h3>
+                        <p class="text-lg md:text-xl lg:text-2xl text-gray-300">
+                            From ideation to execution, we handle every aspect of your digital transformation journey.
+                        </p>
+                    </div>
+
+                    <!-- Affordability with Quality -->
+                    <div>
+                        <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
+                            Affordability with Quality
+                        </h3>
+                        <p class="text-lg md:text-xl lg:text-2xl text-gray-300">
+                            Premium services tailored for small businesses, ensuring value for every dollar spent.
+                        </p>
+                    </div>
+
+                    <!-- Global Expertise, Local Focus -->
+                    <div>
+                        <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
+                            Global Expertise, Local Focus
+                        </h3>
+                        <p class="text-lg md:text-xl lg:text-2xl text-gray-300">
+                            While our expertise spans the globe, our commitment is firmly rooted in serving small
+                            businesses in the US.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet the Team Section -->
+    <section class="bg-gray-800 text-white py-12 md:py-24 lg:py-32">
+        <img src="../images/isometric-business-team 1.png" alt="meet_the_team">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-center">
+                    Meet the Team
+                </h2>
+                <p class="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 text-center">
+                    Our strength lies in the collective expertise of our dedicated team:
+                </p>
+
+                <!-- Team Members -->
+                <div class="space-y-12">
+                    <!-- Website and App Development Expert -->
+                    <div>
+                        <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
+                            Website and App Development Expert
+                        </h3>
+                        <p class="text-lg md:text-xl lg:text-2xl text-gray-300">
+                            A seasoned professional in crafting innovative and user-friendly digital interfaces.
+                        </p>
+                    </div>
+
+                    <!-- AI and Data Specialist -->
+                    <div>
+                        <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
+                            AI and Data Specialist
+                        </h3>
+                        <p class="text-lg md:text-xl lg:text-2xl text-gray-300">
+                            An adept problem solver who integrates advanced AI technologies to deliver transformative
+                            insights and automation.
+                        </p>
+                    </div>
+
+                    <!-- Digital Marketing Strategist -->
+                    <div>
+                        <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
+                            Digital Marketing Strategist
+                        </h3>
+                        <p class="text-lg md:text-xl lg:text-2xl text-gray-300">
+                            A creative force driving impactful campaigns that connect brands with their audiences and
+                            maximize ROI.
+                        </p>
+                    </div>
+
+                    <!-- Operations and Client Relations Manager -->
+                    <div>
+                        <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
+                            Operations and Client Relations Manager
+                        </h3>
+                        <p class="text-lg md:text-xl lg:text-2xl text-gray-300">
+                            Ensuring seamless project execution and fostering enduring partnerships through proactive
+                            communication.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Closing Statement -->
+                <p class="text-lg md:text-xl lg:text-2xl text-gray-300 mt-12 text-center">
+                    Together, we bring a harmonious blend of creativity, technical acumen, and strategic thinking to
+                    every project we undertake.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Our Philosophy Section -->
+    <section class="bg-gray-900 text-white py-12 md:py-24 lg:py-32">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-center">
+                    Our Philosophy
+                </h2>
+                <p class="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 text-center">
+                    At Bycraftter, we believe that success is a shared journey. Our partner-first philosophy drives us
+                    to create solutions that not only meet immediate requirements but also build a foundation for
+                    long-term growth. By integrating creativity, technology, and strategy, we aim to position your
+                    business as a premium player in its niche.
+                </p>
+                <p class="text-lg md:text-xl lg:text-2xl text-gray-300 text-center">
+                    <img src="../images/silver-robot-with-black-nose-white-background 1.png" alt="robot">
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Let’s Build the Future Together Section -->
+    <section class="bg-gray-800 text-white py-12 md:py-24 lg:py-32">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-center">
+                    Let’s Build the Future Together
+                </h2>
+                <p class="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 text-center">
+                    Your digital success story begins with a conversation. Reach out to us today to explore how
+                    Inwebmedia can partner with you to turn your vision into reality. Whether you’re taking your first
+                    step online or looking to elevate your existing digital presence, we’re here to make it happen.
+                </p>
+
+                <!-- Contact Us Button -->
+                <div class="text-center">
+                    <a href="#"
+                        class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition duration-300">
+                        Contact Us
+                    </a>
+                </div>
+
+                <!-- Contact Form -->
+                <form class="space-y-6 mt-12">
+                    <!-- Company Name -->
+                    <div>
+                        <label for="company" class="block text-lg font-medium mb-2">Company</label>
+                        <input type="text" id="company" name="company" placeholder="Company name..."
+                            class="w-full px-4 py-3 rounded-lg bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-600"
+                            required />
+                    </div>
+
+                    <!-- Email -->
+                    <div>
+                        <label for="email" class="block text-lg font-medium mb-2">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Type your email..."
+                            class="w-full px-4 py-3 rounded-lg bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-600"
+                            required />
+                    </div>
+
+                    <!-- Phone Number -->
+                    <div>
+                        <label for="phone" class="block text-lg font-medium mb-2">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="US +1 (555) 123-4567"
+                            class="w-full px-4 py-3 rounded-lg bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-600"
+                            required />
+                    </div>
+
+                    <!-- Terms and Conditions -->
+                    <div class="flex items-center">
+                        <input type="checkbox" id="terms" name="terms"
+                            class="w-5 h-5 rounded bg-gray-700 border-gray-600 focus:ring-blue-600" required />
+                        <label for="terms" class="ml-2 text-gray-300">
+                            Creating an account means you’re okay with our
+                            <a href="#" class="text-blue-600 hover:underline">Terms of Service</a>,
+                            <a href="#" class="text-blue-600 hover:underline">Privacy Policy</a>,
+                            and our default.
+                        </label>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="text-center">
+                        <button type="submit"
+                            class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition duration-300">
+                            Submit
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blogs Section -->
+    <section class="bg-gray-900 text-white py-12 md:py-24 lg:py-32">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-center">
+                    Blogs
+                </h2>
+
+                <!-- Blog Posts -->
+                <div class="space-y-8">
+                    <!-- Blog Post 1 -->
+                    <div>
+                        <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
+                            Heading of Blog
+                        </h3>
+                        <p class="text-lg md:text-xl lg:text-2xl text-gray-300 mb-4">
+                            Reach out to us today to explore how inwebmedia can partner with you to turn your vision
+                            into reality. Whether you’re taking your first step.
+                        </p>
+                        <a href="#"
+                            class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition duration-300">
+                            Read Now
+                        </a>
+                    </div>
+
+                    <!-- Blog Post 2 -->
+                    <div>
+                        <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
+                            Heading of Blog
+                        </h3>
+                        <p class="text-lg md:text-xl lg:text-2xl text-gray-300 mb-4">
+                            Reach out to us today to explore how inwebmedia can partner with you to turn your vision
+                            into reality. Whether you’re taking your first step.
+                        </p>
+                        <a href="#"
+                            class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition duration-300">
+                            Read Now
+                        </a>
+                    </div>
+
+                    <!-- Blog Post 3 -->
+                    <div>
+                        <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
+                            Heading of Blog
+                        </h3>
+                        <p class="text-lg md:text-xl lg:text-2xl text-gray-300 mb-4">
+                            Reach out to us today to explore how inwebmedia can partner with you to turn your vision
+                            into reality. Whether you’re taking your first step.
+                        </p>
+                        <a href="#"
+                            class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition duration-300">
+                            Read Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Boost Your Business Section -->
+                <div class="mt-12 text-center">
+                    <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
+                        Inwebmedia
+                    </h3>
+                    <p class="text-lg md:text-xl lg:text-2xl text-gray-300 mb-4">
+                        Boost your Business: Contact Us
+                    </p>
+                </div>
+
+                <!-- Footer -->
+                <div class="mt-12  text-gray-400 flex gap-56">
+                    <p>
+                        <strong>Mode by Bycroftter</strong> - All rights reserved.
+                    <div class=" md:flex space-x-4 text-purple-500 text-xl md:text-2xl lg:text-3xl">
+                        <a href="#" class="hover:text-white"><i class="ri-instagram-line"></i></a>
+                        <a href="#" class="hover:text-white"><i class="ri-facebook-fill"></i></a>
+                    </div>
+                    </p>
+
+                </div>
+            </div>
+    </section>
+
+
+
+
+
+    <script>
+        // JavaScript for menu toggle
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+    </script>
+
+</body>
+
+</html>
