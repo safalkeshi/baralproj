@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="../src/output.css">
+<!-- Navbar -->
+<nav class="bg-[#0A071D] p-5 flex items-center justify-between">
+    <!-- Left Section (Logo + Menu) -->
+    <div class="flex items-center space-x-5">
+        <!-- Logo -->
+        <div class="flex items-center space-x-2">
+            <img src="../images/Layer_1.png" alt="Logo" class="h-8 md:h-10">
+            <span class="text-lg md:text-xl font-semibold text-blue-500">bycrafters</span>
+        </div>
+        <span class="hidden md:block h-6 w-[2px] bg-purple-700"></span> <!--  -->
+        <div class="hidden md:flex space-x-6 uppercase text-sm md:text-base text-gray-300">
+            <a href="#" class="hover:text-white">Home</a>
+            <a href="#" class="hover:text-white">Services</a>
+            <a href="#" class="hover:text-white">Work</a>
+            <a href="#" class="hover:text-white">BlOg</a>
+            <a href="#" class="hover:text-white">Contact</a>
+        </div>
+    </div>
+
+    <!-- Right Section (Social Icons & Mobile Menu) -->
+    <div class="flex items-center space-x-6">
+        <!-- Social Icons -->
+        <div class="hidden md:flex space-x-4 text-purple-500 text-xl md:text-2xl lg:text-3xl">
+            <a href="#" class="hover:text-white"><i class="ri-instagram-line"></i></a>
+            <a href="#" class="hover:text-white"><i class="ri-facebook-fill"></i></a>
+            <a href="#" class="hover:text-white"><i class="ri-search-line"></i></a>
+        </div>
+
+        <!-- Mobile Menu Button (Visible only on small screens) -->
+        <button id="menu-btn" class="md:hidden text-white text-2xl focus:outline-none">
+            <i class="ri-menu-line"></i>
+        </button>
+    </div>
+</nav>
+
+<!-- Mobile Menu (Initially Hidden) -->
+<div id="mobile-menu"
+    class=" flex flex-col items-center space-y-4 bg-[#0A071D] text-white uppercase text-lg p-5 md:hidden">
+    <a href="#" class="hover:text-blue-500">Home</a>
+    <a href="#" class="hover:text-blue-500">Services</a>
+    <a href="#" class="hover:text-blue-500">Work</a>
+    <a href="#" class="hover:text-blue-500">Pricing</a>
+    <a href="#" class="hover:text-blue-500">Contact</a>
+</div>
