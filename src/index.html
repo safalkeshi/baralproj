@@ -14,8 +14,8 @@
 
 <body class="bg-black text-white font-[Poppins]">
 
-    <!-- Navbar -->
-    <nav class="bg-[#0A071D] p-5 flex items-center justify-between">
+    <!-- Fixed Navbar -->
+    <nav class="bg-[#0A071D] p-5 flex items-center justify-between fixed top-0 left-0 w-full z-50">
         <!-- Left Section (Logo + Menu) -->
         <div class="flex items-center space-x-5">
             <!-- Logo -->
@@ -23,12 +23,12 @@
                 <img src="../images/Layer_1.png" alt="Logo" class="h-8 md:h-10">
                 <span class="text-lg md:text-xl font-semibold text-blue-500">bycrafters</span>
             </div>
-            <span class="hidden md:block h-6 w-[2px] bg-purple-700"></span> <!--  -->
+            <span class="hidden md:block h-6 w-[2px] bg-purple-700"></span> <!-- Divider -->
             <div class="hidden md:flex space-x-6 uppercase text-sm md:text-base text-gray-300">
                 <a href="#" class="hover:text-white">Home</a>
                 <a href="#" class="hover:text-white">Services</a>
                 <a href="#" class="hover:text-white">Work</a>
-                <a href="#" class="hover:text-white">BlOg</a>
+                <a href="#" class="hover:text-white">Blog</a>
                 <a href="#" class="hover:text-white">Contact</a>
             </div>
         </div>
@@ -51,13 +51,15 @@
 
     <!-- Mobile Menu (Initially Hidden) -->
     <div id="mobile-menu"
-        class=" flex flex-col items-center space-y-4 bg-[#0A071D] text-white uppercase text-lg p-5 md:hidden">
+        class="hidden flex-col items-center space-y-4 bg-[#0A071D] text-white uppercase text-lg p-5 md:hidden">
         <a href="#" class="hover:text-blue-500">Home</a>
         <a href="#" class="hover:text-blue-500">Services</a>
         <a href="#" class="hover:text-blue-500">Work</a>
         <a href="#" class="hover:text-blue-500">Pricing</a>
         <a href="#" class="hover:text-blue-500">Contact</a>
     </div>
+
+
     <!-- Welcome to Bycrafters Section with Background Image and Overlay -->
     <section class="relative bg-cover bg-center text-white py-12 md:py-24 lg:py-32"
         style="background-image: url('../images/colour.png');">
