@@ -9,10 +9,9 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" />
     <title>Responsive Navbar</title>
-    <link rel="stylesheet" href="index.css">
 </head>
 
-<body class="bg-[#080016] text-[#FFFFFF] font-[Poppins] w-auto h-auto m-auto">
+<body class="bg-[#080016] text-[#FFFFFF] font-[Poppins]">
 
     <!-- Fixed Navbar -->
     <nav class="p-5 flex items-center justify-between fixed top-0 left-0 w-full h-[90px] z-50 bg-[#080016]">
@@ -29,11 +28,11 @@
             <span class="hidden md:block h-[40px] border-l-[2px] bg-[rgba(190,24,93,0.5)]"></span>
             <!-- Divider -->
             <div class="hidden md:flex items-center space-x-8 uppercase text-[20px] text-[rgba(229,212,192,1)]">
-                <a href="#" class="hover:text-white">Home</a>
-                <a href="#" class="hover:text-white">Services</a>
-                <a href="#" class="hover:text-white">Work</a>
-                <a href="#" class="hover:text-white">Blog</a>
-                <a href="#" class="hover:text-white">Contact</a>
+                <a href="#Home" class="hover:text-white">Home</a>
+                <a href="#Service" class="hover:text-white">Services</a>
+                <a href="#work" class="hover:text-white">Work</a>
+                <a href="#Blogs" class="hover:text-white">Blog</a>
+                <a href="#contact" class="hover:text-white">Contact</a>
             </div>
         </div>
 
@@ -55,28 +54,72 @@
 
     <!-- Mobile Menu (Initially Hidden) -->
     <div id="mobile-menu"
-        class="hidden fixed top-[90px] left-0 w-full bg-[#0A071D] text-white uppercase text-lg p-5 md:hidden z-40">
-        <div class="space-y-4">
-            <a href="#" class="block py-3 px-4 hover:bg-[#7B2CBF] rounded-lg transition duration-300">Home</a>
-            <a href="#" class="block py-3 px-4 hover:bg-[#7B2CBF] rounded-lg transition duration-300">Services</a>
-            <a href="#" class="block py-3 px-4 hover:bg-[#7B2CBF] rounded-lg transition duration-300">Work</a>
-            <a href="#" class="block py-3 px-4 hover:bg-[#7B2CBF] rounded-lg transition duration-300">Blog</a>
-            <a href="#" class="block py-3 px-4 hover:bg-[#7B2CBF] rounded-lg transition duration-300">Contact</a>
+        class="hidden fixed top-[90px] left-0 w-full bg-[#0A071D] text-white uppercase text-lg p-6 md:hidden z-40">
+        <div class="space-y-6">
+            <a href="#Home" class="block py-4 px-6 hover:bg-[#7B2CBF] rounded-lg transition duration-300">Home</a>
+            <a href="#Service"
+                class="block py-4 px-6 hover:bg-[#7B2CBF] rounded-lg transition duration-300">Services</a>
+            <a href="#work" class="block py-4 px-6 hover:bg-[#7B2CBF] rounded-lg transition duration-300">Work</a>
+            <a href="#Blogs" class="block py-4 px-6 hover:bg-[#7B2CBF] rounded-lg transition duration-300">Blog</a>
+            <a href="#contact" class="block py-4 px-6 hover:bg-[#7B2CBF] rounded-lg transition duration-300">Contact</a>
         </div>
     </div>
 
-    <!-- Rest of your content goes here -->
+    <!-- Home Section -->
+    <section id="Home" class="min-h-screen bg-[#080016] flex items-center justify-center">
+        <div class="text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-white">Welcome to the Home Section</h1>
+            <p class="text-lg text-gray-300 mt-4">This is the Home section of the page.</p>
+        </div>
+    </section>
+
+    <!-- Other Sections -->
+    <section id="Service" class="min-h-screen bg-[#0A071D] flex items-center justify-center">
+        <div class="text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-white">Services Section</h1>
+            <p class="text-lg text-gray-300 mt-4">This is the Services section of the page.</p>
+        </div>
+    </section>
+
+    <section id="work" class="min-h-screen bg-[#080016] flex items-center justify-center">
+        <div class="text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-white">Work Section</h1>
+            <p class="text-lg text-gray-300 mt-4">This is the Work section of the page.</p>
+        </div>
+    </section>
+
+    <section id="Blogs" class="min-h-screen bg-[#0A071D] flex items-center justify-center">
+        <div class="text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-white">Blogs Section</h1>
+            <p class="text-lg text-gray-300 mt-4">This is the Blogs section of the page.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="min-h-screen bg-[#080016] flex items-center justify-center">
+        <div class="text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-white">Contact Section</h1>
+            <p class="text-lg text-gray-300 mt-4">This is the Contact section of the page.</p>
+        </div>
+    </section>
 
     <script>
         // JavaScript for menu toggle
         const menuBtn = document.getElementById("menu-btn");
         const mobileMenu = document.getElementById("mobile-menu");
 
+        // Toggle menu when hamburger button is clicked
         menuBtn.addEventListener("click", () => {
             mobileMenu.classList.toggle("hidden");
         });
-    </script>
 
+        // Close menu when a link is clicked
+        const mobileMenuLinks = document.querySelectorAll("#mobile-menu a");
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                mobileMenu.classList.add("hidden");
+            });
+        });
+    </script>
 </body>
 
 </html>
