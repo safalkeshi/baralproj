@@ -1,42 +1,82 @@
-<link rel="stylesheet" href="output.css">
-<!-- Combined Section -->
-<section class="bg-black text-white py-12 md:py-24 lg:py-32">
-    <div class="container mx-auto px-4">
-        <!-- Transform Your Digital Vision into Reality -->
-        <div class="text-center max-w-2xl mx-auto mb-16 md:mb-24">
-            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-                Transform Your Digital Vision into Reality
-            </h2>
-            <p class="text-lg md:text-xl lg:text-2xl text-gray-300">
-                Unleashing excellence, crafting quality, and nurturing success every step of the way.
-            </p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" />
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body class="bg-[#080016] text-[#FFFFFF] font-[Poppins] w-auto h-auto m-auto">
+
+    <!-- Fixed Navbar -->
+    <nav class="p-5 flex items-center justify-between fixed top-0 left-0 w-full h-[90px] z-50 bg-[#080016]">
+        <!-- Left Section (Logo + Menu) -->
+        <div class="flex items-center space-x-5">
+            <!-- Logo -->
+            <div class="flex items-center space-x-2">
+                <img src="../images/Layer_1.png" alt="Logo" class="h-[34px] w-[34px] md:h-10">
+                <span
+                    class="text-lg md:text-xl font-[inter] font-[700] bg-gradient-to-r from-[rgba(224,170,255,1)] to-[rgba(123,44,191,1)] bg-clip-text text-transparent">
+                    bycrafters
+                </span>
+            </div>
+            <span class="hidden md:block h-[40px] border-l-[2px] bg-[rgba(190,24,93,0.5)]"></span>
+            <!-- Divider -->
+            <div class="hidden md:flex items-center space-x-8 uppercase text-[20px] text-[rgba(229,212,192,1)]">
+                <a href="#" class="hover:text-white">Home</a>
+                <a href="#" class="hover:text-white">Services</a>
+                <a href="#" class="hover:text-white">Work</a>
+                <a href="#" class="hover:text-white">Blog</a>
+                <a href="#" class="hover:text-white">Contact</a>
+            </div>
         </div>
 
-        <!-- About Us -->
-        <div class="flex flex-col md:flex-row items-center">
-            <!-- Text Content -->
-            <div class="max-w-3xl md:w-1/2">
-                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-center md:text-left">
-                    About Us
-                </h2>
-                <p class="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8">
-                    Founded with a vision to simplify the digital transition for businesses, Bycrafters is committed to
-                    delivering excellence. We understand that every small business has unique challenges and
-                    opportunities, and our mission is to provide bespoke solutions that not only address these needs but
-                    also unlock growth potential.
-                </p>
-                <p class="text-lg md:text-xl lg:text-2xl text-gray-300">
-                    Our team of four highly skilled professionals collaborates seamlessly to provide comprehensive
-                    solutions that cover every aspect of the digital spectrum. We believe in building relationships
-                    based on trust and transparency, ensuring that our partners—not customers—experience measurable
-                    success.
-                </p>
+        <!-- Right Section (Social Icons & Mobile Menu) -->
+        <div class="flex items-center space-x-6 p-8">
+            <!-- Social Icons -->
+            <div class="hidden md:flex space-x-4 text-purple-500 text-xl md:text-2xl lg:text-3xl">
+                <a href="#" class="hover:text-white"><i class="ri-instagram-line"></i></a>
+                <a href="#" class="hover:text-white"><i class="ri-facebook-fill"></i></a>
+                <a href="#" class="hover:text-white"><i class="ri-search-line"></i></a>
             </div>
 
-            <!-- Image -->
-            <div class="md:w-1/2 mt-8 md:mt-0 md:pl-8">
-                <img src="../images/call-us-now-icons-vector 1.png" alt="About Us" class="w-full rounded-lg shadow-lg">
-            </div>
+            <!-- Mobile Menu Button (Visible only on small screens) -->
+            <button id="menu-btn" class="md:hidden text-white text-2xl focus:outline-none">
+                <i class="ri-menu-line"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu (Initially Hidden) -->
+    <div id="mobile-menu"
+        class="hidden fixed top-[90px] left-0 w-full bg-[#0A071D] text-white uppercase text-lg p-5 md:hidden z-40">
+        <div class="space-y-4">
+            <a href="#" class="block py-3 px-4 hover:bg-[#7B2CBF] rounded-lg transition duration-300">Home</a>
+            <a href="#" class="block py-3 px-4 hover:bg-[#7B2CBF] rounded-lg transition duration-300">Services</a>
+            <a href="#" class="block py-3 px-4 hover:bg-[#7B2CBF] rounded-lg transition duration-300">Work</a>
+            <a href="#" class="block py-3 px-4 hover:bg-[#7B2CBF] rounded-lg transition duration-300">Blog</a>
+            <a href="#" class="block py-3 px-4 hover:bg-[#7B2CBF] rounded-lg transition duration-300">Contact</a>
         </div>
     </div>
-</section>
+
+    <!-- Rest of your content goes here -->
+
+    <script>
+        // JavaScript for menu toggle
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+    </script>
+
+</body>
+
+</html>

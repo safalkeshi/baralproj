@@ -12,29 +12,28 @@
     <link rel="stylesheet" href="index.css">
 </head>
 
-<body class="bg-[#080016] text-[#FFFFFF] font-[Poppins] w-auto h-[8861px] m-auto">
+<body class="bg-[#080016] text-[#FFFFFF] font-[Poppins] w-auto h-auto m-auto">
 
     <!-- Fixed Navbar -->
-    <nav class="p-5 flex items-center justify-between fixed top-0 left-[190px] w-[1600px] h-[90px] z-50">
+    <nav class="p-5 flex items-center justify-between fixed top-0 left-0 w-full h-[90px] z-50 bg-[#080016]">
         <!-- Left Section (Logo + Menu) -->
         <div class="flex items-center space-x-5">
             <!-- Logo -->
             <div class="flex items-center space-x-2">
-                <img src="../images/Layer_1.png" alt="Logo" class="h-[34px] w-[34px] top-[7px] left-[12px] md:h-10">
+                <img src="../images/Layer_1.png" alt="Logo" class="h-[34px] w-[34px] md:h-10">
                 <span
-                    class="text-lg  md:text-xl font-[inter] font-[700] size-[23.83px] leading-[35px] tracking-tighter-[-0.5px] bg-gradient-to-r from-[rgba(224,170,255,1)] to-[rgba(123,44,191,1)] bg-clip-text text-transparent w-[147px] h-[35px] top-[28px] left-[100px] align-middle">bycrafters</span>
+                    class="text-lg md:text-xl font-[inter] font-[700] bg-gradient-to-r from-[rgba(224,170,255,1)] to-[rgba(123,44,191,1)] bg-clip-text text-transparent">
+                    bycrafters
+                </span>
             </div>
-            <span class="hidden md:block h-[40px] top-[20px] border-l-[2px] w-[2px] bg-[rgba(190,24,93,0.5)] "></span>
+            <span class="hidden md:block h-[40px] border-l-[2px] bg-[rgba(190,24,93,0.5)]"></span>
             <!-- Divider -->
-            <div
-                class="hidden md:flex items-center space-x-8 uppercase text-[20px] text-[rgba(229,212,192,1)] font-['poppins']">
-
-                <a href="#" class="leading-[30px] font-normal hover:text-white">Home</a>
-                <a href="#" class="leading-[30px] font-normal hover:text-white">Services</a>
-                <a href="#" class="leading-[30px] font-normal hover:text-white">Work</a>
-                <a href="#" class="leading-[30px] font-normal hover:text-white">Blog</a>
-                <a href="#" class="leading-[30px] font-normal hover:text-white">Contact</a>
-
+            <div class="hidden md:flex items-center space-x-8 uppercase text-[20px] text-[rgba(229,212,192,1)]">
+                <a href="#Home" class="hover:text-white">Home</a>
+                <a href="#Service" class="hover:text-white">Services</a>
+                <a href="#work" class="hover:text-white">Work</a>
+                <a href="#Blogs" class="hover:text-white">Blog</a>
+                <a href="#contact" class="hover:text-white">Contact</a>
             </div>
         </div>
 
@@ -42,12 +41,9 @@
         <div class="flex items-center space-x-6 p-8">
             <!-- Social Icons -->
             <div class="hidden md:flex space-x-4 text-purple-500 text-xl md:text-2xl lg:text-3xl">
-                <a href="#" class="width-[26.4px] h-[26.4px] top-[34px] left-[1184.px   ] hover:text-white"><i
-                        class="ri-instagram-line"></i></a>
-                <a href="#" class="width-[26.4px] h-[26.4px] top-[34px] left-[1184.px   ] hover:text-white"><i
-                        class="ri-facebook-fill"></i></a>
-                <a href="#" class="width-[26.4px] h-[26.4px] top-[34px] left-[1184.px   ] hover:text-white"><i
-                        class="ri-search-line"></i></a>
+                <a href="#" class="hover:text-white"><i class="ri-instagram-line"></i></a>
+                <a href="#" class="hover:text-white"><i class="ri-facebook-fill"></i></a>
+                <a href="#" class="hover:text-white"><i class="ri-search-line"></i></a>
             </div>
 
             <!-- Mobile Menu Button (Visible only on small screens) -->
@@ -59,18 +55,20 @@
 
     <!-- Mobile Menu (Initially Hidden) -->
     <div id="mobile-menu"
-        class="hidden flex-col items-center space-y-4 bg-[#0A071D] text-white uppercase text-lg p-5 md:hidden">
-        <a href="#" class="hover:text-blue-500">Home</a>
-        <a href="#" class="hover:text-blue-500">Services</a>
-        <a href="#" class="hover:text-blue-500">Work</a>
-        <a href="#" class="hover:text-blue-500">Pricing</a>
-        <a href="#" class="hover:text-blue-500">Contact</a>
+        class="hidden fixed top-[90px] left-0 w-full bg-[#0A071D] text-white uppercase text-lg p-5 md:hidden z-40">
+        <div class="space-y-4">
+            <a href="#Home" class="block py-3 px-4 hover:bg-[#7B2CBF] rounded-lg transition duration-300">Home</a>
+            <a href="#Service"
+                class="block py-3 px-4 hover:bg-[#7B2CBF] rounded-lg transition duration-300">Services</a>
+            <a href="#work" class="block py-3 px-4 hover:bg-[#7B2CBF] rounded-lg transition duration-300">Work</a>
+            <a href="#Blogs" class="block py-3 px-4 hover:bg-[#7B2CBF] rounded-lg transition duration-300">Blog</a>
+            <a href="#contact" class="block py-3 px-4 hover:bg-[#7B2CBF] rounded-lg transition duration-300">Contact</a>
+        </div>
     </div>
-
 
     <!-- Welcome to Bycrafters Section with Background Image and Overlay -->
     <section class="relative bg-cover bg-center text-white py-12 md:py-24 lg:py-32"
-        style="background-image: url('./images/colour.png');">
+        style="background-image: url('./images/colour.png');" id="Home">
         <!-- Overlay -->
         <div class="absolute inset-0 bg-black bg-opacity-50"></div>
 
@@ -159,7 +157,7 @@
     <!-- Wrapper div for centering the section -->
     <div class="flex items-center justify-center min-h-screen p-6">
         <!-- Our Services Section -->
-        <section class="bg-black text-white py-16 w-full">
+        <section class="bg-black text-white py-16 w-full" id="Service">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
                     <h2 class="text-4xl md:text-5xl font-[600] mb-4 font-['poppins']">
@@ -267,8 +265,8 @@
     </div>
 
     <!-- Why Choose Bycrafter Section -->
-    <section class="bg-black text-white py-12 md:py-24 lg:py-32">
-        <div class="container mx-auto px-4">
+    <section class="bg-black text-white py-12 md:py-24 lg:py-32" id="work">
+        <div class=" container mx-auto px-4">
             <!-- Centered Heading -->
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-5xl font-['poppins'] font-[600]">
@@ -336,7 +334,7 @@
         </div>
     </section>
     <!-- Meet the Team Section -->
-    <section class="bg-black text-white py-12 md:py-24 lg:py-32">
+    <section class="bg-black text-white py-12 md:py-24 lg:py-32" id="Team">
         <div class="container mx-auto px-4">
             <!-- Centered Heading -->
             <div class="text-center mb-16">
@@ -451,7 +449,7 @@
     </section>
 
     <!-- Let’s Build the Future Together Section -->
-    <section class="bg-gray-800 text-white py-12 md:py-24 lg:py-32">
+    <section class="bg-black text-white py-12 md:py-24 lg:py-32">
         <div class="container mx-auto px-4">
             <div class="max-w-3xl mx-auto">
                 <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-center">
@@ -470,8 +468,8 @@
     </section>
 
     <!--This is start from contact us-->
-    <section class="bg-black text-white py-16">
-        <div class="container mx-auto px-6">
+    <section class="bg-black text-white py-16" id="contact">
+        <div class=" container mx-auto px-6">
             <!-- Section Title -->
             <h2 class="text-center text-4xl font-bold mb-10">Contact Us</h2>
 
@@ -548,7 +546,7 @@
 
 
     <!-- Blog Posts -->
-    <div class="space-y-8">
+    <div class="space-y-8" id="Blogs">
         <div class="text-center">
             <h2 class="text-white font-Poppins text-4xl mt-12">
                 Blogs
@@ -664,7 +662,6 @@
 
 
 
-
     <script>
         // JavaScript for menu toggle
         const menuBtn = document.getElementById("menu-btn");
@@ -674,7 +671,6 @@
             mobileMenu.classList.toggle("hidden");
         });
     </script>
-
 </body>
 
 </html>
