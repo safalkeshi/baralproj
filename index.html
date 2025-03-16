@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="index.css">
 </head>
 
-<body class="bg-[#080016] text-[#FFFFFF] font-[Poppins] w-auto h-auto m-auto">
+<body class="bg-black text-[#FFFFFF] font-[Poppins] w-auto h-auto m-auto">
 
     <!-- Fixed Navbar -->
     <nav class="p-5 flex items-center justify-between fixed top-0 left-0 w-full h-[90px] z-50 bg-[#080016]">
@@ -155,7 +155,7 @@
 
 
     <!-- Wrapper div for centering the section -->
-    <div class="flex items-center justify-center min-h-screen p-6">
+    <div class="flex items-center justify-center h-auto p-6">
         <!-- Our Services Section -->
         <section class="bg-black text-white py-16 w-full" id="Service">
             <div class="container mx-auto px-6">
@@ -667,9 +667,41 @@
         const menuBtn = document.getElementById("menu-btn");
         const mobileMenu = document.getElementById("mobile-menu");
 
+        // Toggle menu when hamburger button is clicked
         menuBtn.addEventListener("click", () => {
             mobileMenu.classList.toggle("hidden");
         });
+
+        // Close menu when a link is clicked
+        const mobileMenuLinks = document.querySelectorAll("#mobile-menu a");
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                mobileMenu.classList.add("hidden");
+            });
+        });
+
+        // Function to check the current section and open the menu if needed
+        function checkCurrentSection() {
+            const sections = document.querySelectorAll("section"); // Get all sections
+            const mobileMenu = document.getElementById("mobile-menu");
+
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top <= 100 && rect.bottom >= 100) { // Check if section is in view
+                    if (section.id === "Home") { // If the current section is "Home"
+                        mobileMenu.classList.remove("hidden"); // Open the mobile menu
+                    } else {
+                        mobileMenu.classList.add("hidden"); // Close the mobile menu for other sections
+                    }
+                }
+            });
+        }
+
+        // Listen for scroll events to check the current section
+        window.addEventListener("scroll", checkCurrentSection);
+
+        // Check the current section on page load
+        checkCurrentSection();
     </script>
 </body>
 
