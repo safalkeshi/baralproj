@@ -244,6 +244,9 @@
   .top-1\/2 {
     top: calc(1/2 * 100%);
   }
+  .top-16 {
+    top: calc(var(--spacing) * 16);
+  }
   .top-\[90px\] {
     top: 90px;
   }
@@ -382,6 +385,9 @@
   .h-8 {
     height: calc(var(--spacing) * 8);
   }
+  .h-12 {
+    height: calc(var(--spacing) * 12);
+  }
   .h-\[34px\] {
     height: 34px;
   }
@@ -409,12 +415,6 @@
   .h-\[390px\] {
     height: 390px;
   }
-  .h-\[436\.02px\] {
-    height: 436.02px;
-  }
-  .h-\[612\.32px\] {
-    height: 612.32px;
-  }
   .h-\[694px\] {
     height: 694px;
   }
@@ -435,6 +435,12 @@
   }
   .w-5 {
     width: calc(var(--spacing) * 5);
+  }
+  .w-8 {
+    width: calc(var(--spacing) * 8);
+  }
+  .w-48 {
+    width: calc(var(--spacing) * 48);
   }
   .w-\[2px\] {
     width: 2px;
@@ -471,6 +477,9 @@
   }
   .max-w-\[432px\] {
     max-width: 432px;
+  }
+  .max-w-md {
+    max-width: var(--container-md);
   }
   .max-w-sm {
     max-width: var(--container-sm);
@@ -631,6 +640,9 @@
   .border-\[\#E0AAFF\] {
     border-color: #E0AAFF;
   }
+  .border-\[rgba\(190\,24\,93\,0\.5\)\] {
+    border-color: rgba(190,24,93,0.5);
+  }
   .border-blue-600 {
     border-color: var(--color-blue-600);
   }
@@ -722,6 +734,10 @@
     --tw-gradient-from: #4400FF1A;
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
+  .from-\[\#E0AAFF\] {
+    --tw-gradient-from: #E0AAFF;
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
   .from-\[rgba\(224\,170\,255\,1\)\] {
     --tw-gradient-from: rgba(224,170,255,1);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
@@ -778,6 +794,9 @@
   }
   .p-8 {
     padding: calc(var(--spacing) * 8);
+  }
+  .px-2 {
+    padding-inline: calc(var(--spacing) * 2);
   }
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
@@ -944,8 +963,14 @@
   .text-\[\#080016\] {
     color: #080016;
   }
+  .text-\[\#CBD5E1\] {
+    color: #CBD5E1;
+  }
   .text-\[\#D1D5DB\] {
     color: #D1D5DB;
+  }
+  .text-\[\#E5D4C0\] {
+    color: #E5D4C0;
   }
   .text-\[\#F3F1EF\] {
     color: #F3F1EF;
@@ -1275,6 +1300,11 @@
       height: calc(var(--spacing) * 10);
     }
   }
+  .md\:h-16 {
+    @media (width >= 48rem) {
+      height: calc(var(--spacing) * 16);
+    }
+  }
   .md\:h-\[64px\] {
     @media (width >= 48rem) {
       height: 64px;
@@ -1328,6 +1358,16 @@
   .md\:w-4\/6 {
     @media (width >= 48rem) {
       width: calc(4/6 * 100%);
+    }
+  }
+  .md\:w-10 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 10);
+    }
+  }
+  .md\:w-56 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 56);
     }
   }
   .md\:w-\[90\%\] {
@@ -1410,6 +1450,20 @@
         margin-inline-start: calc(calc(var(--spacing) * 6) * var(--tw-space-x-reverse));
         margin-inline-end: calc(calc(var(--spacing) * 6) * calc(1 - var(--tw-space-x-reverse)));
       }
+    }
+  }
+  .md\:space-x-8 {
+    @media (width >= 48rem) {
+      :where(& > :not(:last-child)) {
+        --tw-space-x-reverse: 0;
+        margin-inline-start: calc(calc(var(--spacing) * 8) * var(--tw-space-x-reverse));
+        margin-inline-end: calc(calc(var(--spacing) * 8) * calc(1 - var(--tw-space-x-reverse)));
+      }
+    }
+  }
+  .md\:p-6 {
+    @media (width >= 48rem) {
+      padding: calc(var(--spacing) * 6);
     }
   }
   .md\:p-8 {
@@ -1507,6 +1561,11 @@
       line-height: var(--tw-leading, var(--text-xl--line-height));
     }
   }
+  .lg\:mx-0 {
+    @media (width >= 64rem) {
+      margin-inline: calc(var(--spacing) * 0);
+    }
+  }
   .lg\:mt-20 {
     @media (width >= 64rem) {
       margin-top: calc(var(--spacing) * 20);
@@ -1515,6 +1574,11 @@
   .lg\:mr-\[120px\] {
     @media (width >= 64rem) {
       margin-right: 120px;
+    }
+  }
+  .lg\:ml-40 {
+    @media (width >= 64rem) {
+      margin-left: calc(var(--spacing) * 40);
     }
   }
   .lg\:ml-\[120px\] {
