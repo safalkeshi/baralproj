@@ -51,9 +51,12 @@
     --text-5xl--line-height: 1;
     --text-6xl: 3.75rem;
     --text-6xl--line-height: 1;
+<<<<<<< HEAD
+=======
     --text-7xl: 4.5rem;
     --text-7xl--line-height: 1;
     --font-weight-extralight: 200;
+>>>>>>> d8ce09963021ef7c38c0b74d141bd2a2bd5f884f
     --font-weight-normal: 400;
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
@@ -355,6 +358,12 @@
   .ml-15 {
     margin-left: calc(var(--spacing) * 15);
   }
+<<<<<<< HEAD
+  .ml-70 {
+    margin-left: calc(var(--spacing) * 70);
+  }
+=======
+>>>>>>> d8ce09963021ef7c38c0b74d141bd2a2bd5f884f
   .ml-\[200px\] {
     margin-left: 200px;
   }
@@ -385,9 +394,21 @@
   .h-8 {
     height: calc(var(--spacing) * 8);
   }
+<<<<<<< HEAD
   .h-12 {
     height: calc(var(--spacing) * 12);
   }
+=======
+<<<<<<< HEAD
+  .h-40 {
+    height: calc(var(--spacing) * 40);
+  }
+  .h-48 {
+    height: calc(var(--spacing) * 48);
+  }
+=======
+>>>>>>> d8ce09963021ef7c38c0b74d141bd2a2bd5f884f
+>>>>>>> 7bc2813c00624d29f212e17970453ea617295231
   .h-\[34px\] {
     height: 34px;
   }
@@ -406,12 +427,15 @@
   .h-\[91px\] {
     height: 91px;
   }
+<<<<<<< HEAD
+=======
   .h-\[296\.33px\] {
     height: 296.33px;
   }
   .h-\[320px\] {
     height: 320px;
   }
+>>>>>>> d8ce09963021ef7c38c0b74d141bd2a2bd5f884f
   .h-\[390px\] {
     height: 390px;
   }
@@ -451,8 +475,13 @@
   .w-\[140px\] {
     width: 140px;
   }
+<<<<<<< HEAD
+  .w-\[183px\] {
+    width: 183px;
+=======
   .w-\[150px\] {
     width: 150px;
+>>>>>>> d8ce09963021ef7c38c0b74d141bd2a2bd5f884f
   }
   .w-\[478px\] {
     width: 478px;
@@ -484,10 +513,13 @@
   .max-w-sm {
     max-width: var(--container-sm);
   }
+<<<<<<< HEAD
+=======
   .-translate-y-1\/2 {
     --tw-translate-y: calc(calc(1/2 * 100%) * -1);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
+>>>>>>> d8ce09963021ef7c38c0b74d141bd2a2bd5f884f
   .transform {
     transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
   }
@@ -628,6 +660,10 @@
   .border-l-2 {
     border-left-style: var(--tw-border-style);
     border-left-width: 2px;
+  }
+  .border-l-8 {
+    border-left-style: var(--tw-border-style);
+    border-left-width: 8px;
   }
   .border-l-\[2px\] {
     border-left-style: var(--tw-border-style);
@@ -783,6 +819,9 @@
   .object-cover {
     object-fit: cover;
   }
+  .p-1 {
+    padding: calc(var(--spacing) * 1);
+  }
   .p-4 {
     padding: calc(var(--spacing) * 4);
   }
@@ -813,6 +852,12 @@
   .py-3 {
     padding-block: calc(var(--spacing) * 3);
   }
+<<<<<<< HEAD
+  .py-6 {
+    padding-block: calc(var(--spacing) * 6);
+  }
+=======
+>>>>>>> d8ce09963021ef7c38c0b74d141bd2a2bd5f884f
   .py-8 {
     padding-block: calc(var(--spacing) * 8);
   }
@@ -834,6 +879,12 @@
   .text-center {
     text-align: center;
   }
+<<<<<<< HEAD
+  .text-left {
+    text-align: left;
+  }
+=======
+>>>>>>> d8ce09963021ef7c38c0b74d141bd2a2bd5f884f
   .font-\[\'Poppins\'\] {
     font-family: 'Poppins';
   }
@@ -881,6 +932,12 @@
   .text-\[25px\] {
     font-size: 25px;
   }
+<<<<<<< HEAD
+  .text-\[55px\] {
+    font-size: 55px;
+  }
+=======
+>>>>>>> d8ce09963021ef7c38c0b74d141bd2a2bd5f884f
   .leading-\[30px\] {
     --tw-leading: 30px;
     line-height: 30px;
@@ -909,10 +966,13 @@
     --tw-font-weight: 800;
     font-weight: 800;
   }
+<<<<<<< HEAD
+=======
   .font-black {
     --tw-font-weight: var(--font-weight-black);
     font-weight: var(--font-weight-black);
   }
+>>>>>>> d8ce09963021ef7c38c0b74d141bd2a2bd5f884f
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
@@ -1340,6 +1400,8 @@
       width: calc(1/2 * 100%);
     }
   }
+<<<<<<< HEAD
+=======
   .md\:w-1\/5 {
     @media (width >= 48rem) {
       width: calc(1/5 * 100%);
@@ -1350,11 +1412,15 @@
       width: calc(3/4 * 100%);
     }
   }
+>>>>>>> d8ce09963021ef7c38c0b74d141bd2a2bd5f884f
   .md\:w-4\/5 {
     @media (width >= 48rem) {
       width: calc(4/5 * 100%);
     }
   }
+<<<<<<< HEAD
+  .md\:w-9\/8 {
+=======
   .md\:w-4\/6 {
     @media (width >= 48rem) {
       width: calc(4/6 * 100%);
@@ -1381,6 +1447,7 @@
     }
   }
   .md\:w-\[474px\] {
+>>>>>>> d8ce09963021ef7c38c0b74d141bd2a2bd5f884f
     @media (width >= 48rem) {
       width: 474px;
     }
@@ -1684,12 +1751,6 @@
     @media (width >= 64rem) {
       font-size: var(--text-6xl);
       line-height: var(--tw-leading, var(--text-6xl--line-height));
-    }
-  }
-  .lg\:text-7xl {
-    @media (width >= 64rem) {
-      font-size: var(--text-7xl);
-      line-height: var(--tw-leading, var(--text-7xl--line-height));
     }
   }
   .lg\:text-xl {
